@@ -1,11 +1,11 @@
-# HR API Tester 
+# HR API Tester 🧪
 
 A pytest-based API testing framework for validating HR Suite backend services.  
 Designed to provide **fail-fast validation**, **clear failure classification**, and **dependency-aware testing** without using Postman.
 
 ---
 
-## Features
+## 🚀 Features
 
 - ✅ Pre-flight backend health check (`/api/health`)
 - ✅ Token-based authenticated API testing
@@ -22,24 +22,25 @@ Designed to provide **fail-fast validation**, **clear failure classification**, 
 ## 📂 Project Structure
 
 hr_api_tester/
-│
-├── config/
-│ └── env.yaml # Environment configuration (URLs, tokens)
-│
-├── core/
-│ ├── client.py # Reusable API client
-│ └── auth.py # Authentication helpers
-│
-├── utils/
-│ └── data_factory.py # Test payload generators
-│
-├── tests/
-│ ├── test_auth.py # Auth API tests
-│ ├── test_attendance.py # Attendance API tests
-│ ├── test_employees.py # Employee creation tests
-│ ├── test_payroll.py # Payroll tests
-│ └── test_rag.py # RAG dependency tests
-│
+├── config/            # env & endpoint config
+├── core/              # API client, auth, assertions, reporting
+├── tests/             # pytest tests + conftest
+├── utils/             # payloads, db checks
 ├── pytest.ini
 ├── requirements.txt
-└── README.md
+├── README.md
+
+
+---
+
+## ⚙️ Prerequisites
+
+- Python **3.10+**
+- HR Suite backend running locally or remotely
+- Access token for authenticated APIs
+
+---
+Avoid manual Postman testing
+Catch backend issues early
+Provide actionable feedback to backend teams
+Enable CI/CD API validation
