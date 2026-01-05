@@ -1,0 +1,27 @@
+auth:
+  login:
+    method: POST
+    path: /auth/login
+
+employees:
+  list:
+    method: GET
+    path: /api/employees
+  create:
+    method: POST
+    path: /api/employees
+
+attendance:
+  list:
+    method: GET
+    path: /api/attendance
+
+payroll:
+  run:
+    method: POST
+    path: /api/payroll/run
+
+rag:
+  query:
+    method: POST
+    path: /query

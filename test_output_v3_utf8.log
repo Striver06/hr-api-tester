@@ -1,0 +1,29 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.2, pytest-8.0.2, pluggy-1.4.0 -- C:\Users\dheer\AppData\Local\Programs\Python\Python312\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\dheer\Desktop\hr_api_tester
+configfile: pytest.ini
+testpaths: tests
+collecting ... collected 5 items
+
+tests/test_attendance.py::test_attendance_list PASSED                    [ 20%]
+tests/test_auth.py::test_login PASSED                                    [ 40%]
+tests/test_employees.py::test_create_employee FAILED                     [ 60%]
+tests/test_payroll.py::test_run_payroll FAILED                           [ 80%]
+tests/test_rag.py::test_rag_query SKIPPED (RAG server not running)       [100%]
+
+================================== FAILURES ===================================
+____________________________ test_create_employee _____________________________
+tests\test_employees.py:6: in test_create_employee
+    assert res.status_code == 201
+E   assert 500 == 201
+E    +  where 500 = <Response [500]>.status_code
+______________________________ test_run_payroll _______________________________
+tests\test_payroll.py:3: in test_run_payroll
+    assert res.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404]>.status_code
+=========================== short test summary info ===========================
+FAILED tests/test_employees.py::test_create_employee - assert 500 == 201
+FAILED tests/test_payroll.py::test_run_payroll - assert 404 == 200
+=================== 2 failed, 2 passed, 1 skipped in 4.31s ====================
